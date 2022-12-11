@@ -47,3 +47,12 @@ dataFrame[dataSet_rank,]
 dataSet_rank <- order(dataFrame$accuracy,decreasing = TRUE)  ## descending order
 dataSet_rank
 dataFrame[dataSet_rank,]
+
+## Sequence - seq()
+
+dnaSeq <- seq("A","T","G","C")
+dnaSeq
+
+oddNo <- seq(1,20,2)
+oddNo
+
