@@ -33,3 +33,60 @@ markets
 sum(markets,na.rm = TRUE)
 mean(markets,na.rm = TRUE)
 max(markets,na.rm = TRUE)
+
+
+help(dimnames)
+
+
+# Work with matrix datasets
+
+marksDb <- matrix(c(30,40,50,NA,60,70,NA,80,90,100,110,120,130,140,150,160),nrow = 4,ncol = 4,byrow = TRUE)
+marksDb
+
+dimnames(marksDb) <- list(c("A","B","C","D"), c("CP","Py","JS","R"))
+marksDb
+
+
+# [row,col]
+
+## rows access
+
+marksDb[2,]
+marksDb[3,]
+marksDb[1:3,]
+
+marksDb[c(1,2),]
+
+## col access 
+
+marksDb[,2]
+marksDb[,2:4]
+
+
+# further operations
+
+marksDb
+
+# Py marks of B and C
+
+marksDb[c(2:3),2]
+
+marksDb[c("B","C"),2]
+
+# marks of D in Py and R
+
+marksDb["D",c("Py","R")]
+
+
+# apply()
+
+marksDb
+
+apply(marksDb,1,sum,na.rm=TRUE)
+
+## Check cutoff
+
+cutoff <- c(25,35,55,60)
+
+qualify <- (marksDb[c("A"),] >= cutoff)
+qualify
