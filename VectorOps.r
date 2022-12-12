@@ -90,3 +90,20 @@ cutoff <- c(25,35,55,60)
 
 qualify <- (marksDb[c("A"),] >= cutoff)
 qualify
+
+
+## DATASET 
+
+help(data)   ## defintion 
+
+data(mtcars)  # load
+
+View(mtcars)  # view dataset
+  
+str(mtcars)   # structural info
+
+summary(mtcars) # summary
+
+subset(mtcars,mtcars$mpg < 22.8)   # views dataset only at subset level
+
+
