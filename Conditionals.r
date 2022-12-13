@@ -38,3 +38,27 @@ for (i in 1:20) {
   }
   
 }
+
+# For loop
+
+vecFor <- c(10,20,30,40,50,60,70)
+for (cn in vecFor ) {
+  print(paste("VALUE -> ",cn))
+}
+
+
+# Switch case
+
+cityName <- function(city){
+  cityList <- switch (toupper(city),
+    KOL = 1000,
+    MUM = 1500,
+    PAT = 3000,
+    LUC = 4000,
+    7000
+  )
+  return(cityList)
+}
+
+cityName("KOL")
+cityName("NAG")
